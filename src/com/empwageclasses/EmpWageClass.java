@@ -1,17 +1,14 @@
 package com.empwageclasses;
 
 public class EmpWageClass {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wage Computation Program");
-        System.out.println("********************************************");
-
-        int wagePerHour=20;
-        int fullDayHours=0;
-        int totalWorkingDays=20;
-        int maxHours=100;
-        int totalHoursWorked=0;
-        int daysPresent=0;
-        int salary;
+    static int wagePerHour=20;
+    static int fullDayHours=0;
+    static int totalWorkingDays=20;
+    static int maxHours=100;
+    static int totalHoursWorked=0;
+    static int daysPresent=0;
+    static int salary;
+    public static void empWage(){
 
         while(daysPresent<totalWorkingDays && totalHoursWorked<maxHours){
             double empCheck=Math.floor(Math.random()*10)%3;
@@ -40,5 +37,11 @@ public class EmpWageClass {
         System.out.println("No.of days employee worked: "+daysPresent);
         System.out.println("Total Hours="+totalHoursWorked);
         System.out.println("Total Salary is "+salary);
+    }
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Computation Program");
+        System.out.println("********************************************");
+        EmpWageClass.empWage();
+
     }
 }
