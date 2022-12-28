@@ -8,8 +8,9 @@ public class EmpWageClass {
     static int totalHoursWorked=0;
     static int daysPresent=0;
     static int salary;
-    public static void empWage(){
+    public static void empWage(String companyName,int wagePerHour,int totalWorkingDays, int totalHoursWorked){
 
+        System.out.println(companyName);
         while(daysPresent<totalWorkingDays && totalHoursWorked<maxHours){
             double empCheck=Math.floor(Math.random()*10)%3;
             switch (Double.toString(empCheck)){
@@ -37,11 +38,15 @@ public class EmpWageClass {
         System.out.println("No.of days employee worked: "+daysPresent);
         System.out.println("Total Hours="+totalHoursWorked);
         System.out.println("Total Salary is "+salary);
+        System.out.println();
     }
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Program");
         System.out.println("********************************************");
-        EmpWageClass.empWage();
+        System.out.println();
+        EmpWageClass.empWage("Ultimo",100,31,9);
+        EmpWageClass.empWage("Infosys",50,30,8);
+        EmpWageClass.empWage("TCS",31,49,8);
 
     }
 }
